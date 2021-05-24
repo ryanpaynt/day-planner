@@ -1,109 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-1">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-1">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!-- Timeblocks go here -->
+    <div id="root">
       <div class="row">
-            <div class="leftcol col-sm-1">
-              9:00
-            </div>
-            <div contenteditable="true" class="col col-sm-10" id="midcol1"></div>
-            <div class="col col-sm-1"><button id="btn1">Submit!</button></div>
+        <div class="leftcol col-sm-1" id='num'>09:00</div>
+        <div contenteditable="true" class="col col-sm-10" id="midcol"></div>
+        <div class="col col-sm-1"><button id="btn1">Submit!</button></div>
       </div>
-      <!-- <div class="row">
-        <div class="leftcol col-sm-1">
-          10:00
-        </div>
-        <div contenteditable="true" class="col col-sm-10" id="midcol2"></div>
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">10:00</div>
+        <div contenteditable="true" class="col col-sm-10" id="midcol"></div>
         <div class="col col-sm-1"><button id="btn2">Submit!</button></div>
-    </div>
-    <div class="row">
-        <div class="leftcol col-sm-1">
-          11:00
-        </div>
+      </div>
+
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">11:00</div>
         <div contenteditable="true" class="col col-sm-10" id="midcol3"></div>
         <div class="col col-sm-1"><button id="btn3">Submit!</button></div>
-    </div>
-    <div class="row">
-        <div class="leftcol col-sm-1">
-          12:00
-        </div>
+      </div>
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">12:00</div>
         <div contenteditable="true" class="col col-sm-10" id="midcol4"></div>
         <div class="col col-sm-1"><button id="btn4">Submit!</button></div>
-    </div>
-    <div class="row">
-        <div class="leftcol col-sm-1">
-          13:00
-        </div>
+      </div>
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">13:00</div>
         <div contenteditable="true" class="col col-sm-10" id="midcol5"></div>
         <div class="col col-sm-1"><button id="btn5">Submit!</button></div>
-    </div>
-    <div class="row">
-        <div class="leftcol col-sm-1">
-          14:00
-        </div>
+      </div>
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">14:00</div>
         <div contenteditable="true" class="col col-sm-10" id="midcol6"></div>
         <div class="col col-sm-1"><button id="btn6">Submit!</button></div>
-    </div>
-    <div class="row">
-        <div class="leftcol col-sm-1">
-          15:00
-        </div>
+      </div>
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">15:00</div>
         <div contenteditable="true" class="col col-sm-10" id="midcol7"></div>
         <div class="col col-sm-1"><button id="btn7">Submit!</button></div>
-</div>
-    <div class="row">
-        <div class="leftcol col-sm-1">
-            16:00
-        </div>
+      </div>
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">16:00</div>
         <div contenteditable="true" class="col col-sm-10" id="midcol8"></div>
         <div class="col col-sm-1"><button id="btn8">Submit!</button></div>
-    </div>
-    <div class="row">
-        <div class="leftcol col-sm-1">
-          17:00
-        </div>
+      </div>
+      <div class="row">
+        <div class="leftcol col-sm-1" id="num">17:00</div>
         <div contenteditable="true" class="col col-sm-10" id="midcol9"></div>
         <div class="col col-sm-1"><button id="btn9">Submit!</button></div>
-    </div> -->
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    <!-- <script>
+    var edit = document.getElementById('midcol');
+    var date = document.getElementById('currentDay');
+    var currentDate = moment().format("MMM Do, LTS"); 
+    var row = document.querySelectorAll('.row');
+    var unix = parseInt(moment().format('h'));
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script>
-    var edit = document.getElementById('midcol1');
-    
+    date.textContent = currentDate;
+
     edit.innerHTML = localStorage.getItem('edit');
 
     edit.addEventListener('blur', function(){
         localStorage.setItem('edit', this.innerHTML);
     });
-    </script>
-  </body>
+
+    if(unix === parseInt(document.getElementById('num').textContent.substring(0))){
+        edit.setAttribute('style', 'background-color: red');
+    } else if(unix < parseInt(document.getElementById('num').textContent.substring(0))){
+        edit.setAttribute('style', 'background-color: #907163');
+    }else {
+        edit.setAttribute('style', 'background-color: #9O7163');
+    }
+    </script> -->
+</body>
+
 </html>
