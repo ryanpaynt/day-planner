@@ -94,11 +94,11 @@ var i = 7;
 function checkTime(){
     for(var i = 0; i < obj.length; i++){
         if(unix === parseInt(root.children().eq(i).children().eq(0).text().substring(0,2))){
-            root.children().eq(i).children().eq(1).css('background-color', 'brown');
+            root.children().eq(i).children().eq(1).css('background-color', '#907163');
         } else if(unix < parseInt(root.children().eq(i).children().eq(0).text().substring(0,2))){
-            root.children().eq(i).children().eq(1).css('background-color', 'green');
+            root.children().eq(i).children().eq(1).css('background-color', '#5E8C6C');
         }else {
-            root.children().eq(i).children().eq(1).css('background-color', 'red');
+            root.children().eq(i).children().eq(1).css('background-color', '#982E26');
         }
     }
 }

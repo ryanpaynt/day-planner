@@ -70,16 +70,21 @@ body {
     color: white;
   }
   
-  .saveBtn {
+  #btn {
     border-left: 1px solid white;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #907163;
+    background-color: #3f2f49;
     color: white;
+    transform: translateX(-15px);
+    height: 98px;
+    width: 100px;
   }
   
-  .saveBtn i:hover {
+  #btn:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
+
+
   
