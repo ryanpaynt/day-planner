@@ -1,3 +1,4 @@
+/* css for the body element. acts as a global css element */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -6,6 +7,7 @@ body {
 
   }
   
+  /* text is white and formatted */
   textarea {
     background: transparent;
     border: none;
@@ -15,6 +17,7 @@ body {
     padding: 10px;
   }
   
+  /* formatting the jumbotron */
   .jumbotron {
     text-align: center;
     background-color: transparent;
@@ -23,15 +26,18 @@ body {
     border-bottom: 10px solid white;
   }
   
+  /* formatting */
   .description {
     white-space: pre-wrap;
   }
   
+  /* time-block is being formatted */
   .time-block {
     text-align: center;
     border-radius: 15px;
   }
   
+  /* row is beign formatted and colored */
   .row {
     white-space: pre-wrap;
     height: 100px;
@@ -39,37 +45,26 @@ body {
     margin: auto;
   }
 
+  /* left column text is white */
   .leftcol{
       color: white;
   }
 
+  /* all columns have white text and are formatted*/
   .col{
     border: solid 4px white;
     width: 50%;
     color: white;
   }
   
+  /* hour text is white and formatted */
   .hour {
     background-color: #ffffff;
     color: white;
     border-top: 1px dashed white;
   }
   
-  .past {
-    background-color: #d3d3d3;
-    color: white;
-  }
-  
-  .present {
-    background-color: #e66868;
-    color: white;
-  }
-  
-  .future {
-    background-color: #5CDB95;
-    color: white;
-  }
-  
+  /* all buttons have these traits and are formatted */
   #btn {
     border-left: 1px solid white;
     border-top-right-radius: 15px;
@@ -81,6 +76,7 @@ body {
     width: 100px;
   }
   
+  /* when hovering over the buttons they are animated and formatted */
   #btn:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
